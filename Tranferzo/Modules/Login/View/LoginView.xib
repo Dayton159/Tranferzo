@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="Tranferzo" customModuleProvider="target">
+            <connections>
+                <outlet property="dontHaveAccButton" destination="eDW-I0-yNK" id="uwc-7D-RFU"/>
+                <outlet property="loginButton" destination="QIo-PR-cs9" id="oym-Kb-IHL"/>
+                <outlet property="passwordContainer" destination="DbG-xZ-Ded" id="EeY-ih-Qje"/>
+                <outlet property="usernameContainer" destination="PlL-yL-x8N" id="ctQ-Ic-Qfg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6Ac-gi-vxE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rwE-O9-iLh">
+                    <rect key="frame" x="41.5" y="225" width="331" height="224"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlL-yL-x8N" customClass="OSTextField" customModule="Tranferzo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="331" height="99.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Username"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Username"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbG-xZ-Ded" customClass="OSTextField" customModule="Tranferzo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="124.5" width="331" height="99.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="showButton" value="YES"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="eye.slash.fill" catalog="system"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureText" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQL-PR-Ma7">
+                    <rect key="frame" x="161.5" y="121" width="91.5" height="41"/>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDW-I0-yNK">
+                    <rect key="frame" x="32" y="832" width="350" height="30"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                </button>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIo-PR-cs9">
+                    <rect key="frame" x="41.5" y="474" width="331" height="50"/>
+                    <color key="backgroundColor" name="secondaryYellow"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ELS-C4-P1W"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Log In"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eDW-I0-yNK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="1Zy-GY-TfQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eDW-I0-yNK" secondAttribute="bottom" id="36i-p5-kEu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eDW-I0-yNK" secondAttribute="trailing" constant="32" id="3GS-57-XTs"/>
+                <constraint firstItem="QIo-PR-cs9" firstAttribute="top" secondItem="rwE-O9-iLh" secondAttribute="bottom" constant="25" id="6UH-od-bSr"/>
+                <constraint firstItem="QIo-PR-cs9" firstAttribute="leading" secondItem="rwE-O9-iLh" secondAttribute="leading" id="9Ll-rW-4Sy"/>
+                <constraint firstItem="rwE-O9-iLh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GRe-r2-4ea"/>
+                <constraint firstItem="rwE-O9-iLh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="S40-9d-vf6"/>
+                <constraint firstItem="aQL-PR-Ma7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="77" id="SgH-bd-UCD"/>
+                <constraint firstItem="rwE-O9-iLh" firstAttribute="top" secondItem="aQL-PR-Ma7" secondAttribute="bottom" constant="63" id="bfT-Aj-E5l"/>
+                <constraint firstItem="rwE-O9-iLh" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.25" id="dqa-MN-f4p"/>
+                <constraint firstItem="QIo-PR-cs9" firstAttribute="trailing" secondItem="rwE-O9-iLh" secondAttribute="trailing" id="wVm-yk-f7l"/>
+                <constraint firstItem="aQL-PR-Ma7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xTn-mj-wRj"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="eye.slash.fill" catalog="system" width="128" height="82"/>
+        <namedColor name="secondaryYellow">
+            <color red="0.97000002861022949" green="0.91299998760223389" blue="0.60199999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

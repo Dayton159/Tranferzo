@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Proxima-Nova-Alt-Bold.otf">
+            <string>ProximaNovaA-Bold</string>
+        </array>
+        <array key="Proxima-Nova-Alt-Regular.otf">
+            <string>ProximaNovaA-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSTextField" customModule="Tranferzo" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="c9t-9F-Q1I" id="qgu-CX-fOX"/>
+                <outlet property="contentView" destination="NTz-HO-Tgm" id="olY-y9-D6R"/>
+                <outlet property="errorMessage" destination="PEM-lJ-AkS" id="i6A-7O-YQU"/>
+                <outlet property="lineView" destination="hZe-9V-F3M" id="y3m-jM-Mqu"/>
+                <outlet property="textField" destination="jEg-gw-tcY" id="wzj-b8-hBB"/>
+                <outlet property="titleLabel" destination="p0Y-kT-abk" id="iNR-9s-Slc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NTz-HO-Tgm">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p0Y-kT-abk">
+                    <rect key="frame" x="0.0" y="8" width="32.5" height="19.5"/>
+                    <fontDescription key="fontDescription" name="ProximaNovaA-Bold" family="Proxima Nova Alt" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-5l-Q8x">
+                    <rect key="frame" x="0.0" y="35.5" width="414" height="19"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="justified" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jEg-gw-tcY">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="19"/>
+                            <fontDescription key="fontDescription" name="ProximaNovaA-Regular" family="Proxima Nova Alt" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9t-9F-Q1I">
+                            <rect key="frame" x="0.0" y="-2.5" width="28" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="R9z-KZ-zLw"/>
+                                <constraint firstAttribute="height" constant="24" id="Vu2-2V-q0N"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="m7G-xj-fIT">
+                    <rect key="frame" x="0.0" y="62.5" width="414" height="1"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZe-9V-F3M">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" name="underlineColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="pMz-bg-np8"/>
+                            </constraints>
+                        </view>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Alert" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEM-lJ-AkS">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                            <fontDescription key="fontDescription" name="ProximaNovaA-Regular" family="Proxima Nova Alt" pointSize="14"/>
+                            <color key="textColor" name="redError"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="qmt-Ch-Z3N"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="p0Y-kT-abk" firstAttribute="top" secondItem="NTz-HO-Tgm" secondAttribute="top" constant="8" id="41a-zh-Ywv"/>
+                <constraint firstItem="m7G-xj-fIT" firstAttribute="top" secondItem="HRU-5l-Q8x" secondAttribute="bottom" constant="8" id="Juo-XB-8bw"/>
+                <constraint firstItem="HRU-5l-Q8x" firstAttribute="trailing" secondItem="m7G-xj-fIT" secondAttribute="trailing" id="NOE-DN-XNy"/>
+                <constraint firstItem="qmt-Ch-Z3N" firstAttribute="trailing" secondItem="HRU-5l-Q8x" secondAttribute="trailing" id="UQc-Ea-JQS"/>
+                <constraint firstItem="HRU-5l-Q8x" firstAttribute="leading" secondItem="m7G-xj-fIT" secondAttribute="leading" id="aPG-h6-Eon"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="p0Y-kT-abk" secondAttribute="trailing" constant="5" id="aaJ-vK-1Jv"/>
+                <constraint firstItem="p0Y-kT-abk" firstAttribute="leading" secondItem="NTz-HO-Tgm" secondAttribute="leading" id="fSr-4I-zeL"/>
+                <constraint firstItem="HRU-5l-Q8x" firstAttribute="top" secondItem="p0Y-kT-abk" secondAttribute="bottom" constant="8" id="nk0-cx-r05"/>
+                <constraint firstItem="HRU-5l-Q8x" firstAttribute="leading" secondItem="NTz-HO-Tgm" secondAttribute="leading" id="o5P-I0-fLL"/>
+                <constraint firstItem="p0Y-kT-abk" firstAttribute="leading" secondItem="HRU-5l-Q8x" secondAttribute="leading" id="zbq-KW-TEy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="223.18840579710147" y="100.44642857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="redError">
+            <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="underlineColor">
+            <color red="0.50999999046325684" green="0.50999999046325684" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
