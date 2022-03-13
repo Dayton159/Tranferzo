@@ -9,6 +9,7 @@ Money Transfer Simulator App
 * Login
 * Register
 * Display User Transaction History & Balance
+
 _To-Do:_ Make Transfer
 
 ## Technology Used
