@@ -89,8 +89,14 @@ class RegisterView: BaseView, RegisterViewProtocol, AlertPopUpPresentable {
       self.setConfirmPasswordData?(confirmPassword)
     }
     
-    self.passwordContainer.buttonSelected = self.passwordContainer.showPasswordToogle
-    self.confirmPasswordContainer.buttonSelected = self.confirmPasswordContainer.showPasswordToogle
+    self.passwordContainer.buttonSelected = { [weak self] in
+      guard let self = self else { return }
+      self.passwordContainer.showPasswordToogle()
+    }
+    self.confirmPasswordContainer.buttonSelected = { [weak self] in
+      guard let self = self else { return }
+      self.confirmPasswordContainer.showPasswordToogle()
+    }
     
     self.registerButton.addTarget(self, action: #selector(didTapRegister(_:)), for: .touchUpInside)
     self.alreadyHaveAccButton.addTarget(self, action: #selector(didTapHasAccount(_:)), for: .touchUpInside)
