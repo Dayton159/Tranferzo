@@ -75,7 +75,11 @@ class LoginView: BaseView, LoginViewProtocol, AlertPopUpPresentable {
       self.setPasswordData?(password)
     }
     
-    self.passwordContainer.buttonSelected = self.passwordContainer.showPasswordToogle
+    self.passwordContainer.buttonSelected = { [weak self] in
+      guard let self = self else { return }
+      self.passwordContainer.showPasswordToogle()
+    }
+    
     self.loginButton.addTarget(self, action: #selector(didTapLogin(_:)), for: .touchUpInside)
     self.dontHaveAccButton.addTarget(self, action: #selector(didTapNoAccount(_:)), for: .touchUpInside)
   }
